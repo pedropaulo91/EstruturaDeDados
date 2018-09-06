@@ -21,11 +21,11 @@ struct no {
 };
 
 
-typedef struct no Lista; // DefiniÁ„o do tipo
-int contador = 0; // Vari·vel global
+typedef struct no Lista; // Defini√ß√£o do tipo
+int contador = 0; // Vari√°vel global
 const int LIMITE = 20; // Constante global
 
-//ProtÛtipos das rotinas
+//Prot√≥tipos das rotinas
 void menu();
 void cabecalho();
 void inicializarAgenda(Lista**);
@@ -55,7 +55,7 @@ void menu(){
      bool acabou = false, acabou_2 = false;
      int opcao,opcao_2;
      
-     // Vari·veis locais para armazenar na lista 
+     // Vari√°veis locais para armazenar na lista 
      char num[20] ,nome[50], tel_1[15], tel_2[15], email_1[50], email_2[50];
      bool inalt;
      
@@ -70,7 +70,7 @@ void menu(){
           printf("4 - Remover Inicio\n");
           printf("5 - Imprimir Agenda\n");
           printf("6 - Editar Contato\n");
-          printf("7 - Marcar Contado Inalteravel\n");
+          printf("7 - Marcar Contado como Inalteravel\n");
           printf("8 - Buscar Contato\n");
           printf("9 - Sair\n\n");
           printf("Opcao: ");
@@ -590,7 +590,7 @@ void inserirPrimeiro(Lista **plista, char pnum[20], char pnome[50], char ptel_1[
      if(contador <= LIMITE){
          Lista *auxiliar;
          
-         // AlocaÁ„o de memÛria
+         // Aloca√ß√£o de mem√≥ria
          auxiliar = (Lista *)malloc(sizeof(Lista));
          
          strcpy(auxiliar->numero,pnum);
@@ -626,7 +626,7 @@ void inserirFinal(Lista *plista, char pnum[20], char pnome[50], char ptel_1[15],
      if(contador <= LIMITE){
          Lista *auxiliar;
          
-         // AlocaÁ„o de memÛria
+         // Aloca√ß√£o de mem√≥ria
          auxiliar = (Lista *)malloc(sizeof(Lista));
          
          strcpy(auxiliar->numero,pnum);
@@ -665,9 +665,9 @@ void inserirFinal(Lista *plista, char pnum[20], char pnome[50], char ptel_1[15],
 void removerInicio(Lista **plista){
      
      Lista *auxiliar;
-     auxiliar = *plista; // Auxiliar recebe o endereÁo do primeiro nÛ da lista
-     *plista = auxiliar->proximo; // *plista recebe o endereÁo do prÛximo nÛ da lista e passa a ser o 1∫ nÛ  
-     free(auxiliar); // DestrÛi o endereÁo do antigo 1∫ nÛ 
+     auxiliar = *plista; // Auxiliar recebe o endere√ßo do primeiro n√≥ da lista
+     *plista = auxiliar->proximo; // *plista recebe o endere√ßo do pr√≥ximo n√≥ da lista e passa a ser o 1¬∫ n√≥  
+     free(auxiliar); // Destr√≥i o endere√ßo do antigo 1¬∫ n√≥ 
      
      contador--;
      

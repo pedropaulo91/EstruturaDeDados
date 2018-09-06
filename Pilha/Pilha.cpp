@@ -69,7 +69,7 @@ void menu(){
           printf("4 - Desempilhar\n");
           printf("5 - Imprimir Agenda\n");
           printf("6 - Editar Contato\n");
-          printf("7 - Marcar Contato Como Inalteravel\n");
+          printf("7 - Marcar Contato como Inalteravel\n");
           printf("8 - Buscar Contato\n");
           printf("9 - Sair\n\n");
           printf("Opcao: ");
